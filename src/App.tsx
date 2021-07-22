@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
+
+import { ToDoListProvider } from 'contexts';
+import { Add, Detail, List, NotFound } from 'pages';
+import { PageHeader } from 'components';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ToDoListProvider>
+      <Container>
+        <PageHeader />
+        <Switch>
+          <Route exact path="/" component={List} />
+          <Route exact path="/add" component={Add} />
+          <Route exact path="/detail/:id" component={Detail} />
+          <Route component={NotFound}></Route>
+        </Switch>
+      </Container>
+    </ToDoListProvider>
   );
 }
+
+const Container = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 export default App;
