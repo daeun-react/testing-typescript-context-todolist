@@ -94,13 +94,13 @@ exports[`<List /> renders component correctly 1`] = `
   border-radius: 30px;
   position: absolute;
   bottom: -30px;
-  background-color: #AACD6E;
+  background-color: #aacd6e;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c6:hover {
-  background-color: #BCE55C;
+  background-color: #bce55c;
 }
 
 .c6:active {

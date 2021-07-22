@@ -18,7 +18,7 @@ exports[`<PageHeader/> renders component correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #BCE55C;
+  background-color: #aacd6e;
 }
 
 .c1 {

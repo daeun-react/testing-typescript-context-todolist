@@ -28,8 +28,7 @@ exports[`<Add /> renders component correctly 1`] = `
   flex: 1;
   font-size: 16px;
   padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #bdbdbd;
+  border: none;
   outline: none;
 }
 
